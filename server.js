@@ -1,3 +1,15 @@
+/*********************************************************************************
+*  WEB422 – Assignment 1
+*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  
+*  No part of this assignment has been copied manually or electronically from any other source
+*  (including web sites) or distributed to other students.
+* 
+*  Name: Karmkumar Jigneshbhai Patel______________________ Student ID: 124767211______________ Date: 16-09-2022________________
+*  Cyclic Link: https://blushing-cyan-wrap.cyclic.app/
+*
+********************************************************************************/ 
+
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -50,9 +62,9 @@ app.put("/api/movies",function(req,res){
 
 app.delete("/api/movies/:id", function(req,res){
     db.deleteMovieById(req.params.id).then(()=>{
-        res.status(204).send("Error in deleting movie");
+        res.status(204).send("DElete a movie successfully");
     }).catch(function(err) {
-        res.status(500).send("Unable to delete movie");
+        res.status(500).send("Error in deleting movie");
     });
 });
 
